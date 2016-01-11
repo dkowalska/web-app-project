@@ -1,14 +1,58 @@
+
+<body>
+    
+<!--<div id="downcontent"> </div>-->
+
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Workspace</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
+    <title><%= full_title(yield(:title)) %></title>
+    <%= stylesheet_link_tag 'application', media: 'all',
+                                           'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+    <!--[if lt IE 9]>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js">
+      </script>
+    <![endif]-->
+  </head>
+  <body>
+     <header class="navbar navbar-fixed-top navbar-inverse">
+      <div class="container">
+        <div class="navbar-header">
+          <%= link_to "eLibrary", root_path, class: "navbar-brand" %>
+        </div>
+        <nav>
+          <ul class="nav navbar-nav navbar-right">
+            <li><%= link_to "Home",   '#' %></li>
+            <li><%= link_to "Movies",   '#' %></li>
+            <li><%= link_to "TV Shows",   '#' %></li>
+            <li><%= link_to "eBooks",   '#' %></li>
+            <li><%= link_to "Magazines",   '#' %></li>
+            <li><%= link_to "SIGN UP", '#' %></li>
+            
+            <% # if user_signed_in? %>
+		      <% #= link_to "Log out", destroy_user_session_path, method: :delete  %>
+            <% #else %>
+		      <% #= link_to "Log in", new_user_session_path  %>
+		    <% #end %>
+		    
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <% flash.each do |key, value| %>
+      <div class="alert alert-<%= key %> alert-dismissable">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+        <%= value %>
+      </div>
+	  <% end %>
 
-<%= yield %>
+    <div class="container">
+      <%= yield %>
+    </div>
+  </body>
+</html>
 
 </body>
 </html>
