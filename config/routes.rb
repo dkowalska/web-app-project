@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'mags/search'
+
+  get 'ebooks/search'
+
+  get 'tv_shows/search'
+
+  get 'movies/search'
+
   root 'static_pages#index'
 
   # The priority is based upon order of creation: first created -> highest priority.

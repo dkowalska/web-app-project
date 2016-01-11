@@ -11,10 +11,10 @@
         <nav class="collapse navbar-collapse navbar-ex1-collapse">
           <ul class="nav navbar-nav navbar-right">
             <li><%= link_to root_path, class: "navbar-brand" do %><span class="glyphicon glyphicon-home"></span><% end %></li>
-            <li><%= link_to "MOVIES",   root_path %></li>
-            <li><%= link_to "TV SHOWS",   '#' %></li>
-            <li><%= link_to "EBOOKS",   '#' %></li>
-            <li><%= link_to "MAGS",   '#' %></li>
+            <li><%= link_to "MOVIES", movies_search_path %></li>
+            <li><%= link_to "TV SHOWS", tv_shows_search_path %></li>
+            <li><%= link_to "EBOOKS",  ebooks_search_path %></li>
+            <li><%= link_to "MAGS", mags_search_path %></li>
             
             <li><%= link_to "LOG IN", '#' %></li>
             
