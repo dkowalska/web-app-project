@@ -1,0 +1,125 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+body {
+  padding-top: 50px;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+}
+
+.center h1 {
+  margin-bottom: 10 px;
+}
+
+.jumbotron {
+  -webkit-filter: grayscale(90%);
+  text-align: center;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  font-family: 'Open Sans', sans-serif;
+  min-height: 500px;
+  background: url(http://kellijaebaeli.com/wp-content/uploads/2014/08/reading-mood-free-desktop-wallpaper-1920x1080.jpg) no-repeat center center;
+  background-size: 100%;
+  background-position: center bottom;
+  color: #fff;
+  letter-spacing: 4px;
+}
+
+.jumbotron h1{
+  font-weight: extra-bold;
+  margin-bottom: 20px;
+  font-size: 8em;
+  font-size: 9vw
+}
+
+.jumbotron p{
+  font-size: 2em;
+  font-size: 2vw;
+  margin-bottom: 50px;
+}
+
+/* typography */
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+  letter-spacing: 4px;
+}
+
+h2 {
+  font-size: 1.2em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: #777;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+
+/* Add a dark background color with a little bit see-through */ 
+.navbar {
+    margin-bottom: 0;
+    background-color: #2d2d30;
+    border: 0;
+    font-size: 11px !important;
+    letter-spacing: 4px;
+    opacity:0.9;
+}
+
+/* Add a gray color to all navbar links */
+.navbar li a, .navbar .navbar-brand { 
+    color: #d5d5d5 !important;
+}
+
+/* On hover, the links will turn white */
+.navbar-nav li a:hover {
+    color: #fff !important;
+}
+
+/* The active link */
+.navbar-nav li.active a {
+    color: #fff !important;
+    background-color:#29292c !important;
+}
+
+/* Remove border color from the collapsible button */
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+}
+
+/* Black buttons with extra padding and without rounded borders */
+.btn {
+  padding: 10px 40px;
+  background-color: transparent;
+  color: #ffffff;
+  border: 3px solid #ffffff;
+  border-radius: 0;
+  transition: .2s;
+  font-size: 1.25em;
+}
+
+/* On hover, the color of .btn will transition to white with black text */
+.btn:hover, .btn:focus {
+   background-color: #ffffff;
+   color: #333;
+}
+

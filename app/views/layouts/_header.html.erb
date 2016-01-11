@@ -1,0 +1,30 @@
+ <header class="navbar navbar-fixed-top navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span> 
+          </button>
+          <%= link_to "eLibrary", root_path, class: "navbar-brand" %>
+        </div>
+        <nav class="collapse navbar-collapse navbar-ex1-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><%= link_to root_path, class: "navbar-brand" do %><span class="glyphicon glyphicon-home"></span><% end %></li>
+            <li><%= link_to "MOVIES",   root_path %></li>
+            <li><%= link_to "TV SHOWS",   '#' %></li>
+            <li><%= link_to "EBOOKS",   '#' %></li>
+            <li><%= link_to "MAGS",   '#' %></li>
+            
+            <li><%= link_to "LOG IN", '#' %></li>
+            
+            <% # if user_signed_in? %>
+		      <% #= link_to "Log out", destroy_user_session_path, method: :delete  %>
+            <% #else %>
+		      <% #= link_to "Log in", new_user_session_path  %>
+		    <% #end %>
+		    
+          </ul>
+        </nav>
+      </div>
+    </header>
