@@ -9,6 +9,5 @@ class SiteLayoutTest < ActionDispatch::IntegrationTest
     assert_select "a[href=?]", tv_shows_path, count: 2
     assert_select "a[href=?]", ebooks_path, count: 2
     assert_select "a[href=?]", mags_path, count: 2
-    assert_select "a[href=?]", signup_path, count: 1
   end
 end

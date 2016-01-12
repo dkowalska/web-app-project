@@ -149,12 +149,8 @@ p {
     color: #333;
   }
   &:focus {
-    background-color: #333;
-    color: #ffffff;
-    &:hover {
-      background-color: #333;
-      color: #333;
-    }
+    background-color: #transparent;
+    color: #333;
   }
 }
 
