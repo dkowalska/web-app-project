@@ -1,11 +1,9 @@
 Rails.application.routes.draw do
-  get 'mags/search'
 
-  get 'ebooks/search'
-
-  get 'tv_shows/search'
-
-  get 'movies/search'
+  get 'movies' => 'movies#search'
+  get 'tv_shows' => 'tv_shows#search'
+  get 'ebooks' => 'ebooks#search'
+  get 'mags' => 'mags#search'
 
   root 'static_pages#index'
 
