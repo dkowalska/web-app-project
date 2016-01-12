@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  get 'gignup' => 'users#new'
   get 'movies' => 'movies#search'
   get 'tv_shows' => 'tv_shows#search'
   get 'ebooks' => 'ebooks#search'
