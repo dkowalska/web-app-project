@@ -21,27 +21,27 @@ textarea {
 }
 
 .container {
-    padding: 40px;
+  padding: 40px;
 }
 
 .jumbotron-index {
-  -webkit-filter: grayscale(90%);
   text-align: center;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   min-height: 500px;
-  background: url('34pgzu9.png') no-repeat center center;
+  background: url('2r5rl6o.png') no-repeat center center;
   background-size: 100%;
   background-position: center bottom;
   color: #fff;
   letter-spacing: 4px;
-    h1{
+  h1{
     font-weight: extra-bold;
     margin-bottom: 20px;
     font-size: 9em;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   }
-    p {
+  p {
     font-size: 2em;
     margin-bottom: 70px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   }
 }
 
@@ -62,7 +62,7 @@ h1 {
 
 h2 {
   font-size: 2em;
-  letter-spacing: 4px;
+  letter-spacing: 3px;
   margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
@@ -112,7 +112,7 @@ p {
 }
 
 /* Black buttons with extra padding and without rounded borders */
-.btn {
+#jumbotron-button {
   padding: 10px 40px;
   background-color: transparent;
   color: #ffffff;
@@ -124,16 +124,65 @@ p {
     background-color: #ffffff;
     color: #333;
   }
+  &:focus {
+    background-color: transparent;
+    color: #ffffff;
+    &:hover {
+      background-color: #ffffff;
+      color: #333;
+    }
+  }
+}
+
+#signup_form_button{
+  margin-top: 15px;
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: 1px;
+  background-color: #333;
+  color: #ffffff;
+  border: 3px solid #333;
+  border-radius: 0;
+  transition: .2s;
+  font-size: 1em;
+  &:hover {
+    background-color: transparent;
+    color: #333;
+  }
+  &:focus {
+    background-color: #333;
+    color: #ffffff;
+    &:hover {
+      background-color: #333;
+      color: #333;
+    }
+  }
+}
+
+#form {
+  padding: 30px 60px;
+  margin-bottom: 60px;
+  margin-top: 30px;
 }
 
 .icon {
-    border: 10px solid transparent;
-    margin-bottom: 25px;
-    width: 80%;
-    height: 80%;
-    opacity: 0.7;
-    &:hover {
-      border-color: #e6e6e6;
-    }
+  border: 10px solid transparent;
+  margin-bottom: 25px;
+  width: 80%;
+  height: 80%;
+  opacity: 0.7;
+  &:hover {
+    border-color: #e6e6e6;
+  }
 }
+
+.form-group{
+  padding: 5px;
+  text-align: left;
+  label {
+    color: #333;
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 1px;
+  }
+}
+
 
