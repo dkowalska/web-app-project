@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get 'tv_shows' => 'tv_shows#search'
   get 'ebooks' => 'ebooks#search'
   get 'mags' => 'mags#search'
+  resources :users
 
   root 'static_pages#index'
 
