@@ -1,8 +1,8 @@
 <div class="jumbotron vertical-center horizontal-center jumbotron-index" >
     <h1>eLIBRARY</h1>
     <p>The biggest online library in the world.</p>
-    <button id="jumbotron-button" type="button" class="btn" data-toggle="modal" data-target="#myModal">Sign up!</button>
-    <%= render 'layouts/signup_form' %>
+    <!--<button id="jumbotron-button" type="button" class="btn" data-toggle="modal" data-target="#myModal">Sign up!</button>-->
+    <%= button_to "Sign up!", signup_path, :method => "get", id: "jumbotron-button", type: "button", class: "btn" %>
 </div>
 <div class="container text-center">
   <h2>WHAT DO WE OFFER?</h2>

@@ -2,6 +2,10 @@
 @import "bootstrap";
 
 
+html, body {
+    height:100%;
+}
+
 body {
   padding-top: 50px;
 }
@@ -21,8 +25,9 @@ textarea {
   }
 }
 
-.container {
+.container-signup {
   padding: 40px;
+  height: 92%;
 }
 
 .jumbotron-index {
@@ -31,8 +36,13 @@ textarea {
   background: url("2r5rl6o.png") no-repeat center center;
   background-size: 100%;
   background-position: center bottom;
-  color: #fff;
   letter-spacing: 4px;
+  color: #fff;
+  label{
+    text-align: left;
+    letter-spacing: 1px;
+    color: #333;
+  }
   h1{
     font-weight: extra-bold;
     margin-bottom: 20px;
@@ -121,6 +131,7 @@ p {
   border-radius: 0;
   transition: .2s;
   font-size: 1.25em;
+  width: 150px;
   &:hover {
     background-color: #ffffff;
     color: #333;
@@ -145,6 +156,8 @@ p {
   border-radius: 0;
   transition: .2s;
   font-size: 1em;
+  width: 200px;
+  position: center;
   &:hover {
     background-color: transparent;
     color: #333;
@@ -157,8 +170,9 @@ p {
 
 #form {
   padding: 30px 60px;
-  margin-bottom: 60px;
-  margin-top: 30px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  position:absolute !important;
 }
 
 .icon {
@@ -173,7 +187,6 @@ p {
 }
 
 .form-group{
-  padding: 5px;
   text-align: left;
   label {
     color: #333;
@@ -198,4 +211,15 @@ p {
   @include box_sizing;
 }
 
+/* forms */
 
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  width: 100%;
+  margin-bottom: 15px;
+  /*@include box_sizing;*/
+}
+
+input {
+  height: auto !important;
+}
