@@ -1,10 +1,15 @@
 Rails.application.routes.draw do
 
+  get 'sessions/new'
+
   get 'signup' => 'users#new'
   get 'movies' => 'movies#search'
   get 'tv_shows' => 'tv_shows#search'
   get 'ebooks' => 'ebooks#search'
   get 'mags' => 'mags#search'
+  get    'login'   => 'sessions#new'
+  post   'login'   => 'sessions#create'
+  delete 'logout'  => 'sessions#destroy'
   resources :users
 
   root 'static_pages#index'
