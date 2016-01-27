@@ -1,1 +1,20 @@
-<%= @user.name %>, <%= @user.email %>
+<div class="jumbotron vertical-center horizontal-center jumbotron-index" >
+    <% flash.each do |message_type, message| %>
+    <div class="alert alert-<%= message_type %>"><%= message %></div>
+    <% end %>
+    <h1>eLIBRARY</h1>
+    <form role="form" id="form">
+        <div class="form-group">
+            <label for="email">Email address:</label>
+            <input type="email" class="form-control" id="email" placeholder=<%= @user.name =%>>
+        </div>
+        <div class="form-group">
+            <label for="pwd">Password:</label>
+            <input type="password" class="form-control" id="pwd" placeholder=<%= @user.email =%>>
+        </div>
+    </form>
+</div>
+<div class="container text-center">
+    <h2>YOUR BOOKS:</h2>
+    <h3>Currently you have no books in your library.</h3>
+</div>
