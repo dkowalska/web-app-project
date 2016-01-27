@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
 
+  resources :movies
   get 'sessions/new'
 
   get 'signup' => 'users#new'
-  get 'movies' => 'movies#search'
+  get 'movies' => 'movies#index'
   get 'tv_shows' => 'tv_shows#search'
   get 'ebooks' => 'ebooks#search'
   get 'mags' => 'mags#search'
@@ -11,6 +12,7 @@ Rails.application.routes.draw do
   post   'login'   => 'sessions#create'
   delete 'logout'  => 'sessions#destroy'
   resources :users
+  resources :movies, only: [:show, :index]
 
   root 'static_pages#index'
 

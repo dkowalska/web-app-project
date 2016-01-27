@@ -280,3 +280,15 @@ input, textarea, select, .uneditable-input {
 input {
   height: auto !important;
 }
+
+.thumbnail {
+    background-color: #0d0d0d;
+    height: 400px;
+    width: 200px;
+    text-align: center;
+    h3{
+    color: #fff;
+    line-height: 1em;
+    margin-bottom: 0px;
+    }
+}
