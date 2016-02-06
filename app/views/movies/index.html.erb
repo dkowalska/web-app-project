@@ -5,10 +5,10 @@
   <%= form_tag(movies_path, :method => "get", class: "navbar-form", id: "form-movies") do %>
       <div class="form-group">
         <%= label_tag "movie_title_search", "Title " %></br>
-        <%= text_field_tag :search, params[:search], class: 'form-control', id: 'movie-search-form' %></br>
+        <%= text_field_tag :title, params[:title], class: 'form-control', id: 'movie-search-form' %></br>
         
         <%= label_tag "movie_genre_search", "Genre " %></br>
-        <%= text_field_tag :search, params[:search], class: 'form-control', id: 'movie-search-form' %></br>
+        <%= select_tag :genre, options_for_select(["Action","Biography","Comedy","Crime","Drama","Family","Fantasy","Romance","Thriller","War"], params[:genre]), :include_blank => true, class: 'form-control', id: 'movie-search-form' %>
       </div>
       <%= button_tag("Search", type: "submit", class: "btn signup_form_button") %>
     

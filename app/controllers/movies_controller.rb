@@ -4,11 +4,16 @@ class MoviesController < ApplicationController
   # GET /movies
   # GET /movies.json
   def index
-    if params[:search]
-      @movies = Movie.search(params[:search]).order("created_at DESC")
+    if params[:title] || params[:genre]
+      @movies = Movie.search(params[:title], params[:genre]).all
     else
       @movies = Movie.order("created_at DESC")
     end
+  end
+  
+  def self.search(search_title, search_genre) 
+    return scoped unless search_title.present? || search_genre.present?
+    where(['project_title LIKE ? AND genre LIKE ?', "%#{search_title}%", "%#{search_genre}%"])
   end
 
   # GET /movies/1
