@@ -1,15 +1,33 @@
-<div class="container container-signup">
-<h1 class="column">Featured movies</h1>
+<div class="container container-movie-search">
+ 
+  <!-- When submit the form, the view rendered will be the index view of movies resource -->
+  <h1>Search movies</h1>
+  <%= form_tag(movies_path, :method => "get", class: "navbar-form", id: "form-movies") do %>
+      <div class="form-group">
+        <%= label_tag "movie_title_search", "Title " %></br>
+        <%= text_field_tag :search, params[:search], class: 'form-control', id: 'movie-search-form' %></br>
+        
+        <%= label_tag "movie_genre_search", "Genre " %></br>
+        <%= text_field_tag :search, params[:search], class: 'form-control', id: 'movie-search-form' %></br>
+      </div>
+      <%= button_tag("Search", type: "submit", class: "btn signup_form_button") %>
+    
+  <% end %>
+
+</div>
+
+<div class="container container-movies">
+
   <div class="row">
     <% @movies.each do |movie| %>
       <div class="col-sm-3 col-lg-3 col-md-3">
-        <div class="thumbnail">
+        <div class="thumbnail thumbnail-movie-grid">
           <%= link_to movie, class: "poster", id: "poster" do %>
             <%= image_tag movie.poster %>
           <% end %>
           <div class="caption">
               <h3><%= movie.title %></h3>
-              <h3><span class="label label-warning"><%= movie.price %></span></h3>
+              <!--<h3><span class="label label-warning"><%= movie.price %></span></h3>-->
           </div>
         </div>
       </div>
