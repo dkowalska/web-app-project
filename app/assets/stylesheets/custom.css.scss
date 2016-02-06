@@ -33,6 +33,14 @@ span {
 .container-signup {
   padding: 40px;
   min-height: 92%;
+  text-align: center;
+  .form-group {
+    text-align: auto;
+    label {
+      color: #333;
+      text-shadow: none;
+    }
+  }
 }
 
 .container-page {
@@ -64,6 +72,14 @@ span {
 .container-login {
   padding: 40px;
   min-height: 92%;
+  text-align: center;
+  .form-group {
+    text-align: auto;
+    label {
+      color: #333;
+      text-shadow: none;
+    }
+  }
 }
 
 .jumbotron-index {
@@ -226,6 +242,7 @@ p {
   &:hover {
     background-color: transparent;
     color: #333;
+    border: 3px solid #333;
   }
   &:focus {
     background-color: #transparent;
