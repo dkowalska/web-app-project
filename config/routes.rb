@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  get 'password_resets/new'
+
+  get 'password_resets/edit'
+
   resources :movies
   get 'sessions/new'
 
@@ -14,6 +18,7 @@ Rails.application.routes.draw do
   resources :users
   resources :movies, only: [:show, :index]
   resources :account_activations, only: [:edit]
+  resources :password_resets,     only: [:new, :create, :edit, :update]
 
   root 'static_pages#index'
 
