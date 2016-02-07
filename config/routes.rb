@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   delete 'logout'  => 'sessions#destroy'
   resources :users
   resources :movies, only: [:show, :index]
+  resources :account_activations, only: [:edit]
 
   root 'static_pages#index'
 
